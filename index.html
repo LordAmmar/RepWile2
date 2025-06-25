@@ -1,27 +1,80 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Artikel Singkat</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            line-height: 1.6;
-            margin: 20px;
-        }
-        h1 {
-            color: #007bff;
-        }
-        p {
-            color: #333;
-        }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Toko Soelati</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f4f4f4;
+    }
+    header {
+      background-color: #2b2b91;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+    .product-grid {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      padding: 20px;
+    }
+    .product {
+      background: white;
+      margin: 10px;
+      border-radius: 8px;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+      width: 200px;
+      padding: 10px;
+      text-align: center;
+    }
+    .product img {
+      width: 100%;
+      height: auto;
+      border-radius: 6px;
+    }
+    button {
+      background-color: #2b2b91;
+      color: white;
+      border: none;
+      padding: 10px;
+      margin-top: 10px;
+      cursor: pointer;
+      border-radius: 4px;
+    }
+  </style>
 </head>
 <body>
-    <h1>Mengenal Teknologi AI</h1>
-    <p>Artificial Intelligence (AI) atau kecerdasan buatan telah berkembang pesat dalam beberapa tahun terakhir. Teknologi ini memungkinkan mesin untuk belajar dan mengambil keputusan berdasarkan data yang diberikan.</p>
-    <p>AI digunakan dalam berbagai bidang, seperti kesehatan, keuangan, dan transportasi, untuk meningkatkan efisiensi serta memberikan solusi inovatif bagi berbagai tantangan.</p>
-    <p>Dengan perkembangan teknologi yang semakin maju, AI akan terus berperan penting dalam kehidupan kita.</p>
+  <header>
+    <h1>Toko Soelati</h1>
+    <p>Selamat datang di toko online kami!</p>
+  </header>
+
+  <div class="product-grid">
+    <div class="product" id="produk1">
+      <img src="img/produk1.jpg" alt="Produk 1" id="foto1" />
+      <h3 id="nama1">Baju Hitam</h3>
+      <p id="harga1">Rp100.000</p>
+      <button onclick="beliProduk('produk1')">Beli</button>
+    </div>
+
+    <div class="product" id="produk2">
+      <img src="img/produk2.jpg" alt="Produk 2" id="foto2" />
+      <h3 id="nama2">Nama Produk 2</h3>
+      <p id="harga2">Rp200.000</p>
+      <button onclick="beliProduk('produk2')">Beli</button>
+    </div>
+  </div>
+
+  <script>
+    function beliProduk(id) {
+      const nama = document.getElementById(id).querySelector("h3").textContent;
+      alert("Kamu membeli: " + nama);
+    }
+  </script>
 </body>
 </html>
